@@ -2,15 +2,21 @@
 import { Card, CardContent, CardFooter, CardHeader } from "./card";
 import { Button } from "./button";
 
+interface Seller {
+  id: string;
+  name: string;
+  price: number;
+}
+
 interface ProductCardProps {
   title: string;
   price: number;
   image: string;
   id: number;
-  sellerName?: string;
+  sellers?: Seller[];
 }
 
-export function ProductCard({ title, price, image, id, sellerName }: ProductCardProps) {
+export function ProductCard({ title, price, image, id, sellers }: ProductCardProps) {
   return (
     <Card className="overflow-hidden">
       <CardHeader className="p-0">
@@ -24,9 +30,19 @@ export function ProductCard({ title, price, image, id, sellerName }: ProductCard
       </CardHeader>
       <CardContent className="p-4">
         <h3 className="font-semibold text-lg">{title}</h3>
-        <p className="text-forest text-lg">R{price.toFixed(2)} per kg</p>
-        {sellerName && (
-          <p className="text-sm text-gray-500 mt-1">Sold by: {sellerName}</p>
+        <p className="text-forest text-lg">From R{price.toFixed(2)} per kg</p>
+        {sellers && sellers.length > 0 && (
+          <div className="mt-2 space-y-2">
+            <p className="text-sm text-gray-500">Available from {sellers.length} seller{sellers.length > 1 ? 's' : ''}</p>
+            <div className="space-y-1">
+              {sellers.map((seller) => (
+                <div key={seller.id} className="text-sm flex justify-between items-center">
+                  <span>{seller.name}</span>
+                  <span className="font-medium">R{seller.price.toFixed(2)}</span>
+                </div>
+              ))}
+            </div>
+          </div>
         )}
       </CardContent>
       <CardFooter className="p-4 pt-0 flex justify-between">
