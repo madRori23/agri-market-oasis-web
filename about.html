@@ -1,10 +1,9 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AgriMarket - Fresh from Farm to Table</title>
+    <title>AgriMarket - About Us</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link href="/assets/css/styles.css" rel="stylesheet">
 </head>
@@ -31,72 +30,49 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <h1>Fresh from Farm to Your Table</h1>
-                <p class="mb-8 text-gray-600">
-                    Your one-stop shop for fresh produce from local farmers. Quality vegetables and fruits,
-                    delivered with care.
+    <!-- Main Content -->
+    <main class="flex-grow py-12 px-4 sm:px-6 lg:px-8 bg-cream-light">
+        <div class="max-w-4xl mx-auto">
+            <h1 class="text-3xl font-bold text-forest mb-8">About AgriMarket</h1>
+            
+            <div class="bg-white p-6 rounded-lg shadow-sm mb-10">
+                <h2 class="text-2xl font-semibold text-forest mb-4">Our Mission</h2>
+                <p class="text-gray-700 mb-6">
+                    AgriMarket aims to bridge the gap between local farmers and consumers, creating a sustainable marketplace
+                    that supports small-scale agriculture while providing consumers with access to fresh, locally grown produce.
                 </p>
-                <div class="flex justify-center space-x-4">
-                    <a href="/products.html" class="btn btn-primary">Browse Products</a>
-                    <a href="/about.html" class="btn btn-ghost">Learn more</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Featured Products -->
-    <section class="py-12 bg-white">
-        <div class="container">
-            <h2 class="text-3xl font-bold text-gray-900 mb-8">Featured Products</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="card">
-                    <div class="card-header">
-                        <img src="https://images.unsplash.com/photo-1618160702438-9b02ab6515c9" alt="Fresh Tomatoes">
+                
+                <h2 class="text-2xl font-semibold text-forest mb-4">How It Works</h2>
+                <div class="about-grid">
+                    <div class="step-card">
+                        <div class="step-number">1</div>
+                        <h3 class="font-medium mb-2">Farmers List Products</h3>
+                        <p class="text-sm text-gray-600">Local farmers upload their available produce with pricing and details.</p>
                     </div>
-                    <div class="card-body">
-                        <h3 class="card-title">Fresh Tomatoes</h3>
-                        <p class="card-price">R20.00 per kg</p>
-                        <p class="text-gray-600">Seller: Farm Fresh</p>
+                    <div class="step-card">
+                        <div class="step-number">2</div>
+                        <h3 class="font-medium mb-2">Buyers Browse & Purchase</h3>
+                        <p class="text-sm text-gray-600">Consumers browse products, compare prices, and place orders.</p>
                     </div>
-                    <div class="card-footer">
-                        <a href="/products.html" class="btn btn-outline w-full">View Details</a>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div class="card-header">
-                        <img src="https://images.unsplash.com/photo-1472396961693-142e6e269027" alt="Organic Carrots">
-                    </div>
-                    <div class="card-body">
-                        <h3 class="card-title">Organic Carrots</h3>
-                        <p class="card-price">R15.00 per kg</p>
-                        <p class="text-gray-600">Seller: Organic Gardens</p>
-                    </div>
-                    <div class="card-footer">
-                        <a href="/products.html" class="btn btn-outline w-full">View Details</a>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div class="card-header">
-                        <img src="https://images.unsplash.com/photo-1570913149827-d2ac84ab3f9a" alt="Fresh Apples">
-                    </div>
-                    <div class="card-body">
-                        <h3 class="card-title">Fresh Apples</h3>
-                        <p class="card-price">R25.00 per kg</p>
-                        <p class="text-gray-600">Seller: Apple Orchard</p>
-                    </div>
-                    <div class="card-footer">
-                        <a href="/products.html" class="btn btn-outline w-full">View Details</a>
+                    <div class="step-card">
+                        <div class="step-number">3</div>
+                        <h3 class="font-medium mb-2">Direct Delivery</h3>
+                        <p class="text-sm text-gray-600">Products are delivered fresh from farm to table.</p>
                     </div>
                 </div>
             </div>
+            
+            <div class="bg-white p-6 rounded-lg shadow-sm">
+                <h2 class="text-2xl font-semibold text-forest mb-4">Our Values</h2>
+                <ul class="list-disc pl-6 space-y-3 text-gray-700">
+                    <li><span class="font-medium">Sustainability</span> - We prioritize environmentally friendly farming practices.</li>
+                    <li><span class="font-medium">Community</span> - We support local farmers and strengthen regional food systems.</li>
+                    <li><span class="font-medium">Transparency</span> - We provide clear information about product origins and practices.</li>
+                    <li><span class="font-medium">Quality</span> - We ensure high standards for all products on our platform.</li>
+                </ul>
+            </div>
         </div>
-    </section>
+    </main>
 
     <!-- Footer -->
     <footer class="bg-green-800 text-white mt-auto">

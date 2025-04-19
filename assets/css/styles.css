@@ -1,4 +1,3 @@
-
 /* Base styles */
 :root {
     --forest: #2d6a4f;
@@ -299,8 +298,9 @@ img {
 
 /* Hero section */
 .hero {
-    padding: 6rem 0;
     background-color: var(--cream-light);
+    padding: 6rem 0;
+    text-align: center;
 }
 
 .hero h1 {
@@ -344,5 +344,107 @@ img {
     
     .hero h1 {
         font-size: 2rem;
+    }
+}
+
+/* Hero Section */
+.hero {
+    background-color: var(--cream-light);
+    padding: 6rem 0;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    color: var(--forest);
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+}
+
+.hero-content {
+    max-width: 640px;
+    margin: 0 auto;
+}
+
+/* Dashboard Specific */
+.dashboard-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.stat-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    text-align: center;
+}
+
+.stat-number {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--forest);
+}
+
+/* About Page */
+.about-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.step-card {
+    text-align: center;
+    padding: 2rem;
+    border: 1px solid var(--gray-300);
+    border-radius: 0.5rem;
+}
+
+.step-number {
+    width: 3rem;
+    height: 3rem;
+    background: var(--forest);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem;
+    font-weight: bold;
+}
+
+/* Products Page */
+.products-layout {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    gap: 2rem;
+}
+
+.filters-sidebar {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    height: fit-content;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero {
+        padding: 4rem 0;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .dashboard-stats,
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .products-layout {
+        grid-template-columns: 1fr;
     }
 }
