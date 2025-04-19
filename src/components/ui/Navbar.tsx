@@ -2,8 +2,11 @@
 import { Link } from "react-router-dom";
 import { ShoppingCart, User } from "lucide-react";
 import { Button } from "./button";
+import { useAuth } from "@/context/AuthContext";
 
 export function Navbar() {
+  const { user, isAuthenticated, logout } = useAuth();
+  
   return (
     <nav className="bg-white shadow-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -33,9 +36,29 @@ export function Navbar() {
             <Button variant="ghost" size="icon">
               <ShoppingCart className="h-5 w-5" />
             </Button>
-            <Button variant="ghost" size="icon">
-              <User className="h-5 w-5" />
-            </Button>
+            
+            {isAuthenticated ? (
+              <div className="flex items-center space-x-4">
+                <div className="text-sm text-gray-700">
+                  <span className="hidden md:inline">Hi, </span>
+                  <Link to="/dashboard" className="font-medium text-forest hover:underline">
+                    {user?.name}
+                  </Link>
+                  <span className="hidden md:inline text-xs ml-1">
+                    ({user?.role})
+                  </span>
+                </div>
+                <Button variant="ghost" size="sm" onClick={logout}>
+                  Logout
+                </Button>
+              </div>
+            ) : (
+              <Link to="/auth">
+                <Button variant="ghost" size="icon">
+                  <User className="h-5 w-5" />
+                </Button>
+              </Link>
+            )}
           </div>
         </div>
       </div>
